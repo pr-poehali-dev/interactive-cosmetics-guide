@@ -1,14 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from 'react';
+import Navbar from '@/components/Navbar';
+import HomePage from '@/pages/HomePage';
+import AnalyzerPage from '@/pages/AnalyzerPage';
+import ProductsPage from '@/pages/ProductsPage';
+import IngredientsPage from '@/pages/IngredientsPage';
+import RatingsPage from '@/pages/RatingsPage';
 
-const Index = () => {
+type Page = 'home' | 'analyzer' | 'products' | 'ingredients' | 'ratings';
+
+export default function Index() {
+  const [page, setPage] = useState<Page>('home');
+
+  const navigate = (p: string) => setPage(p as Page);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
+    <div className="min-h-screen">
+      <Navbar active={page} onNavigate={navigate} />
+      {page === 'home' && <HomePage onNavigate={navigate} />}
+      {page === 'analyzer' && <AnalyzerPage />}
+      {page === 'products' && <ProductsPage />}
+      {page === 'ingredients' && <IngredientsPage />}
+      {page === 'ratings' && <RatingsPage />}
     </div>
   );
-};
-
-export default Index;
+}
