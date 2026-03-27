@@ -4,9 +4,10 @@ import HomePage from '@/pages/HomePage';
 import AnalyzerPage from '@/pages/AnalyzerPage';
 import ProductsPage from '@/pages/ProductsPage';
 import IngredientsPage from '@/pages/IngredientsPage';
-import RatingsPage from '@/pages/RatingsPage';
+import AllergyPage from '@/pages/AllergyPage';
+import SkinTestPage from '@/pages/SkinTestPage';
 
-type Page = 'home' | 'analyzer' | 'products' | 'ingredients' | 'ratings';
+type Page = 'home' | 'analyzer' | 'products' | 'ingredients' | 'allergy' | 'skintest';
 
 export default function Index() {
   const [page, setPage] = useState<Page>('home');
@@ -16,11 +17,12 @@ export default function Index() {
   return (
     <div className="min-h-screen">
       <Navbar active={page} onNavigate={navigate} />
-      {page === 'home' && <HomePage onNavigate={navigate} />}
-      {page === 'analyzer' && <AnalyzerPage />}
-      {page === 'products' && <ProductsPage />}
+      {page === 'home'        && <HomePage onNavigate={navigate} />}
+      {page === 'analyzer'   && <AnalyzerPage />}
+      {page === 'products'   && <ProductsPage />}
       {page === 'ingredients' && <IngredientsPage />}
-      {page === 'ratings' && <RatingsPage />}
+      {page === 'allergy'    && <AllergyPage />}
+      {page === 'skintest'   && <SkinTestPage />}
     </div>
   );
 }

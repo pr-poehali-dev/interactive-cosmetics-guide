@@ -58,10 +58,10 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				lab: {
-					green: '#4ade80',
-					blue: '#38bdf8',
-					amber: '#fbbf24',
-					red: '#f87171',
+					sage: '#7a9e8e',
+					blush: '#d4a5a5',
+					lavender: '#a89bbf',
+					amber: '#c4a97a',
 				}
 			},
 			borderRadius: {
