@@ -5,10 +5,10 @@ interface HomePageProps {
 }
 
 const STATS = [
-  { value: '30+', label: 'Ингредиентов в базе',  icon: 'Atom',      color: 'var(--sage)' },
-  { value: '35+', label: 'Продуктов в каталоге', icon: 'Package',   color: 'var(--blush)' },
-  { value: '12',  label: 'Топ-аллергенов',        icon: 'AlertCircle', color: 'var(--dust-amber)' },
-  { value: '5',   label: 'Типов кожи',            icon: 'Sparkles',  color: 'var(--lavender)' },
+  { value: '85+', label: 'Ингредиентов INCI',    icon: 'Atom',        color: 'var(--sage)' },
+  { value: '76',  label: 'Продуктов в каталоге', icon: 'Package',     color: 'var(--blush)' },
+  { value: '12',  label: 'Топ-аллергенов',       icon: 'AlertCircle', color: 'var(--dust-amber)' },
+  { value: '5',   label: 'Типов кожи',           icon: 'Sparkles',    color: 'var(--lavender)' },
 ];
 
 const FEATURES = [
